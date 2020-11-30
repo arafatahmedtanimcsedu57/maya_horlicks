@@ -20,4 +20,4 @@ const navlink_list = [
 
 export const getNavLinkList = () => navlink_list;
 
-export const isActive = ({ pathname }, path) => pathname === path ? "nav-link--active" : "";
+export const isActive = ({ pathname }, path) => pathname === path ? "--active" : "";

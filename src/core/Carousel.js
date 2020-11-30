@@ -4,13 +4,16 @@ import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext, DotGroup } fro
 import 'pure-react-carousel/dist/react-carousel.es.css';
 
 
-const Carousel = () => {
+const Carousel = ({ slide_images, total_number_of_slide_images }) => {
     return (
-        <div className="section section--carousel">
+        <div
+            className="section section--carousel"
+        // style={{ "width": "100%", "height": "200px" }}
+        >
             <CarouselProvider
                 naturalSlideWidth={100}
-                naturalSlideHeight={20}
-                totalSlides={3}
+                naturalSlideHeight={40}
+                totalSlides={total_number_of_slide_images}
                 // infinite={true}
                 isPlaying={true}
                 playDirection="backward"
@@ -19,25 +22,16 @@ const Carousel = () => {
                 <Slider
                     className="carousel__slider slider"
                 >
-                    {/* loop will use here */}
-                    <Slide
-                        index={0}
-                        className="slider__slide"
-                    >
-                        I am the first Slide.
-                    </Slide>
-                    <Slide
-                        index={1}
-                        className="slider__slide"
-                    >
-                        I am the second Slide.
-                    </Slide>
-                    <Slide
-                        index={2}
-                        className="slider__slide"
-                    >
-                        I am the third Slide.
-                    </Slide>
+                    {slide_images.map((image, index) =>
+                        <Slide
+                            key={`${index}-slide`}
+                            index={index}
+                            className="slider__slide slide"
+                        >
+                            <img className="slide__image" style={{ "width": "100%" }} src={image} alt="slide image" />
+                        </Slide>
+                    )}
+
                 </Slider>
 
                 <ButtonBack className="btn btn--carousel-direction btn--pre-slide">Pre</ButtonBack>

@@ -9,9 +9,12 @@ const NavLinks = ({ location }) => {
     return (
         <ul className="nav__links">{
             navlink_list.map((navlink, index) =>
-                <li className="nav-item" key={`${index}-${navlink.name}`} >
+                <li
+                    className={`nav-item nav-item${isActive({ ...location }, navlink.to)}`}
+                    key={`${index}-${navlink.name}`}
+                >
                     <Link
-                        className={`nav-link ${isActive({ ...location }, navlink.to)}`}
+                        className={`nav-link nav-link${isActive({ ...location }, navlink.to)}`}
                         to={navlink.to}
                     >
                         {navlink.tag_name}
