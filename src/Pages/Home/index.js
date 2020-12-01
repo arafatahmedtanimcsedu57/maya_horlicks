@@ -3,11 +3,13 @@ import React from 'react';
 import Layout from './../../core/Layout';
 import Carousel from './../../core/Carousel';
 import CardOnlyHeader from './../../core/CardOnlyHeader';
+import Add from './../../core/Add';
 
 import { getSlideImages } from './_slide';
 
 import add_left_image from './images/add_left.png';
 import add_right_image from './images/add_right.png';
+import add_hr_image from './images/add_hr.png';
 import profile_image from './images/profile.png';
 import ask_question_to_experts_image from './images/ask_question_to_experts.png';
 
@@ -38,7 +40,7 @@ const Home = () => {
 
             <div className="section section--main">
                 <div className="main-left">
-                    <img src={add_left_image} alt="add" />
+                    <Add add_banner={add_left_image} />
                 </div>
                 <div className="main-mid">
                     <CardOnlyHeader
@@ -47,10 +49,21 @@ const Home = () => {
                     >
                         {ButtonForAskQuestionToExperts()}
                     </CardOnlyHeader>
+
+                    <div
+                        className="wrapper"
+                        style={{
+                            "margin": "20px 20px",
+                            "display": "flex",
+                            "justifyContent": "center"
+
+                        }}>
+                        <Add add_banner={add_hr_image} />
+                    </div>
                 </div>
 
                 <div className="main-right">
-                    <img src={add_right_image} alt="add" />
+                    <Add add_banner={add_right_image} />
                 </div>
             </div>
         </Layout>

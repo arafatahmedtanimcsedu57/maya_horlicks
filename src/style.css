@@ -330,7 +330,7 @@
   padding: 20px;
   margin: 20px;
   background-color: #f2c6cb;
-  border-radius: 24px;
+  border-radius: 8px;
 }
 
 @media (min-width: 768px) {
@@ -419,5 +419,10 @@
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   color: white;
+}
+
+.add img {
+  width: 100%;
+  max-width: 550px;
 }
 /*# sourceMappingURL=style.css.map */

@@ -305,7 +305,7 @@
         margin: 20px;
 
         background-color: #f2c6cb;
-        border-radius: 24px;
+        border-radius: 8px;
 
         .card-image {
             height: 150px;
@@ -373,5 +373,14 @@
         font-weight: 500;
         color: white;
 
+    }
+}
+
+// 
+
+.add {
+    img {
+        width: 100%;
+        max-width: 550px;
     }
 }
