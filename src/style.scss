@@ -207,24 +207,22 @@
         font-weight: 300;
         font-size: 10px;
 
+        box-shadow: 0 3px 5px #aaaaaa;
+
         border-radius: 40px;
 
         margin: 10px 0px;
 
         @include r(768) {
-
-
             margin: 10px 0px 10px 10px;
         }
 
         @include r(998) {
-
-
             margin: 10px 0px 10px 20px;
         }
 
         span {
-            margin: 0 10px;
+            margin: 0 20px;
         }
 
         img {
