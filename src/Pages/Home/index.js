@@ -11,10 +11,14 @@ const total_number_of_slide_images = slide_images.length;
 const Home = () => {
     return (
         <Layout>
-            <Carousel
-                slide_images={slide_images}
-                total_number_of_slide_images={total_number_of_slide_images}
-            />
+            <div
+                className="section section--carousel"
+            >
+                <Carousel
+                    slide_images={slide_images}
+                    total_number_of_slide_images={total_number_of_slide_images}
+                />
+            </div>
         </Layout>
     )
 }

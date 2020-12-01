@@ -1,13 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 .layout .container--main {
-  margin-top: 120px;
+  margin-top: 100px;
+}
+
+@media (min-width: 768px) {
+  .layout .container--main {
+    margin-top: 120px;
+  }
 }
 
 .nav {
   top: 0;
   position: fixed;
   width: 100vw;
-  height: 120px;
+  height: 100px;
   -webkit-box-shadow: 0px 7px 10px #e2e0df;
           box-shadow: 0px 7px 10px #e2e0df;
   display: -webkit-box;
@@ -21,6 +27,12 @@
           align-items: center;
   background-color: #f8f8f8;
   z-index: 10;
+}
+
+@media (min-width: 768px) {
+  .nav {
+    height: 120px;
+  }
 }
 
 .nav__brand-image {
@@ -46,7 +58,13 @@
 }
 
 .nav__brand-image img {
-  height: 60px;
+  height: 50px;
+}
+
+@media (min-width: 768px) {
+  .nav__brand-image img {
+    height: 60px;
+  }
 }
 
 .nav__links {
@@ -102,7 +120,87 @@
   white-space: nowrap;
 }
 
+@media (min-width: 768px) {
+  .nav__links .nav-item .nav-link {
+    letter-spacing: 2px;
+  }
+}
+
+@media (min-width: 998px) {
+  .nav__links .nav-item .nav-link {
+    letter-spacing: 3px;
+  }
+}
+
 .nav__links .nav-item .nav-link--active {
   color: white;
+}
+
+.btn {
+  border: none;
+  outline: none;
+}
+
+.btn:hover {
+  border: none;
+  outline: none;
+  background: white;
+}
+
+.btn:focus {
+  border: none;
+  outline: none;
+  background: white;
+}
+
+.btn:active {
+  border: none;
+  outline: none;
+  background: white;
+}
+
+.btn--carousel-direction {
+  margin: 0px;
+  padding: 0px;
+  height: 20px;
+  width: 20px;
+}
+
+.btn--carousel-direction img {
+  height: 20px;
+  width: 20px;
+}
+
+@media (min-width: 480px) {
+  .btn--carousel-direction {
+    height: 30px;
+    width: 30px;
+  }
+  .btn--carousel-direction img {
+    height: 30px;
+    width: 30px;
+  }
+}
+
+@media (min-width: 768px) {
+  .btn--carousel-direction {
+    height: 40px;
+    width: 40px;
+  }
+  .btn--carousel-direction img {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+@media (min-width: 998px) {
+  .btn--carousel-direction {
+    height: 60px;
+    width: 60px;
+  }
+  .btn--carousel-direction img {
+    height: 60px;
+    width: 60px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

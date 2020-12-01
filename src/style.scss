@@ -4,7 +4,11 @@
 
 .layout {
     .container--main {
-        margin-top: 120px;
+        margin-top: 100px;
+
+        @include r(768) {
+            margin-top: 120px;
+        }
     }
 }
 
@@ -15,7 +19,11 @@
     position: fixed;
 
     width: 100vw;
-    height: 120px;
+    height: 100px;
+
+    @include r(768) {
+        height: 120px;
+    }
 
     box-shadow: 0px 7px 10px #e2e0df;
 
@@ -44,7 +52,11 @@
         }
 
         img {
-            height: 60px;
+            height: 50px;
+
+            @include r(768) {
+                height: 60px;
+            }
         }
     }
 
@@ -85,6 +97,16 @@
                 text-transform: uppercase;
                 color: black;
                 font-family: 'Montserrat', sans-serif;
+
+                @include r(768) {
+                    letter-spacing: 2px;
+                }
+
+
+                @include r(998) {
+                    letter-spacing: 3px;
+                }
+
                 white-space: nowrap;
 
                 &--active {
@@ -93,5 +115,78 @@
             }
         }
     }
+}
 
+// Carousel
+.carousel {}
+
+
+//button
+.btn {
+    border: none;
+    outline: none;
+
+    &:hover {
+        border: none;
+        outline: none;
+        background: white;
+    }
+
+    &:focus {
+        border: none;
+        outline: none;
+        background: white;
+    }
+
+    &:active {
+        border: none;
+        outline: none;
+        background: white;
+    }
+
+    &--carousel-direction {
+
+        margin: 0px;
+        padding: 0px;
+
+        height: 20px;
+        width: 20px;
+
+        img {
+            height: 20px;
+            width: 20px;
+        }
+
+        @include r(480) {
+            height: 30px;
+            width: 30px;
+
+            img {
+                height: 30px;
+                width: 30px;
+            }
+        }
+
+
+        @include r(768) {
+            height: 40px;
+            width: 40px;
+
+            img {
+                height: 40px;
+                width: 40px;
+            }
+        }
+
+
+        @include r(998) {
+            height: 60px;
+            width: 60px;
+
+            img {
+                height: 60px;
+                width: 60px;
+            }
+        }
+    }
 }
