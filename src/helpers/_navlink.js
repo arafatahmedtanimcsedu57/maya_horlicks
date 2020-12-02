@@ -1,18 +1,18 @@
 const navlink_list = [
     {
-        "to": "/home",
+        "to": "home",
         "tag_name": "Home"
     },
     {
-        "to": "/videos",
+        "to": "videos",
         "tag_name": "Videos"
     },
     {
-        "to": "/ask-a-question",
+        "to": "ask-experts",
         "tag_name": "Ask Question"
     },
     {
-        "to": "/faq",
+        "to": "faq",
         "tag_name": "FAQ"
     },
 ];

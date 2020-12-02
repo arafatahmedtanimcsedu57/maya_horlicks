@@ -19,4 +19,5 @@ const Navbar = ({ history }) => {
 }
 
 
-export default withRouter(Navbar);
+// export default withRouter(Navbar);
+export default Navbar

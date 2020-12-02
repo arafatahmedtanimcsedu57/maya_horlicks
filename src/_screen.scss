@@ -5,7 +5,7 @@
         }
     }
 
-    @if $point==320 {
+    @if $point==375 {
         @media (min-width: 320px) {
             @content;
         }
@@ -29,8 +29,8 @@
         }
     }
 
-    @if $point==998 {
-        @media (min-width: 998px) {
+    @if $point==980 {
+        @media (min-width: 980px) {
             @content;
         }
     }

@@ -7,6 +7,10 @@ const Layout = ({ children }) => (
     <div className="layout">
         <Navbar />
 
+        {/* <div className="proxy">
+
+        </div> */}
+
         <div className="container container--main">
             {children}
         </div>

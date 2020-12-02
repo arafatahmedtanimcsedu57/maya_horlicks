@@ -32,8 +32,12 @@ const CustomCarousel = ({ slide_images, total_number_of_slide_images }) => {
             {slide_images.map((image, index) =>
 
                 <img
+                    key={`${index}-image`}
                     className="slide__image"
-                    style={{ "width": "100%" }}
+                    style={{
+                        "width": "100%",
+                        // "height": "532px"
+                    }}
                     src={image}
                     alt="slide image"
                 />
