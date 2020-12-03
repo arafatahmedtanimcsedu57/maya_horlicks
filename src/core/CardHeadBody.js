@@ -1,9 +1,12 @@
 import React from 'react';
 
-const CardHeaderBody = ({ intro_image, main_headline, sub_headline, content, background_color, children }) => {
+const CardHeaderBody = ({ intro_image, main_headline, sub_headline, content, background_color, style_class, children }) => {
     return (
-        <div className="card card--header-body" style={{ "background": background_color }}>
-            <div className="card__header">
+        <div
+            className={`card card--header-body card--header-body--${style_class}`}
+            style={{ "background": background_color }}
+        >
+            <div className={`card__header card--header-body--${style_class}__header`}>
                 <div className="intro">
                     <img src={intro_image} alt="intro" />
                     <div className="headline">
@@ -19,7 +22,7 @@ const CardHeaderBody = ({ intro_image, main_headline, sub_headline, content, bac
                 {children}
             </div>
 
-            <div className="card__body">
+            <div className={`card__body card--header-body--${style_class}__body`}>
                 {content}
             </div>
         </div>

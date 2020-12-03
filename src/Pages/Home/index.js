@@ -8,7 +8,7 @@ import CardHeaderBody from './../../core/CardHeadBody';
 import VideoTabs from './components/videosTabs';
 import Add from './../../core/Add';
 
-import { getSlideImages } from './_slide';
+import { getSlideImages } from './utility/_slide';
 import { getFAQList } from './../../helpers/_faq';
 
 import add_left_image from './images/add_left.png';
@@ -76,6 +76,7 @@ const Home = () => {
                 sub_headline={faq.sub_title}
                 content={faq.content}
                 background_color={background_colors[index % background_colors.length]}
+                style_class={"faq"}
             >
                 {ButtonForSeeAnswerOfFAQ()}
             </CardHeaderBody>
@@ -97,7 +98,7 @@ const Home = () => {
 
             <div className="section section--main">
                 <div className="main-left">
-                    <Add add_banner={add_left_image} />
+                    <Add add_banner={add_left_image} style_class={"vr"} />
                 </div>
                 <div className="main-mid">
                     <div id="videos">
@@ -121,6 +122,7 @@ const Home = () => {
 
                     <div id="ask-experts">
                         <CardOnlyHeader
+                            style_class={"ask-question"}
                             image={profile_image}
                             headline={"Ask questions about Pre-pregnancy"}
                         >
@@ -128,16 +130,7 @@ const Home = () => {
                         </CardOnlyHeader>
                     </div>
 
-                    <div
-                        className="wrapper"
-                        style={{
-                            "margin": "20px 0px",
-                            "display": "flex",
-                            "justifyContent": "center"
-
-                        }}>
-                        <Add add_banner={add_hr_image} />
-                    </div>
+                    <Add add_banner={add_hr_image} style_class={"hr"} />
 
                     <div id="faq">
                         <div
@@ -167,20 +160,12 @@ const Home = () => {
                         </div>
                     </div>
 
-                    <div
-                        className="wrapper"
-                        style={{
-                            "margin": "20px 0px",
-                            "display": "flex",
-                            "justifyContent": "center"
+                    <Add add_banner={add_hr_image} style_class={"hr"} />
 
-                        }}>
-                        <Add add_banner={add_hr_image} />
-                    </div>
                 </div>
 
                 <div className="main-right">
-                    <Add add_banner={add_right_image} />
+                    <Add add_banner={add_right_image} style_class={"vr"} />
                 </div>
             </div>
         </Layout>

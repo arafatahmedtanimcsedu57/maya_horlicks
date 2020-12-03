@@ -1,8 +1,8 @@
 import React from 'react-dom'
 
-const CardOnlyHeader = ({ image, headline, children }) => {
+const CardOnlyHeader = ({ image, headline, children, style_class }) => {
     return (
-        <div className="card card--only-header">
+        <div className={`card card--only-header card--only-header--${style_class}`}>
 
             <img className="card-image" src={image} alt="profile image" />
 

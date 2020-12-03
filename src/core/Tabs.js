@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
 
-const Tabs = ({ tab_buttons_list, tabs_content_list, style_class }) => {
+const Tabs = ({ tab_buttons_list, tab_contents_list, style_class }) => {
     const [active_tab, setActiveTab] = useState(0);
 
     const Button = ({ index, button_name, style_class }) => {
-        console.log(index, active_tab)
         return (
             <button
                 key={`${index}-${button_name}-button`}
@@ -26,7 +25,7 @@ const Tabs = ({ tab_buttons_list, tabs_content_list, style_class }) => {
             </div>
 
             <div className={`tabs__content tabs--${style_class}__content`}>
-                {tabs_content_list[active_tab]}
+                {tab_contents_list[active_tab]}
             </div>
         </div>
     )
